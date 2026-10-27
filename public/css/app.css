@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f4f6f5;
+    color: #1f2a26;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.topbar {
+    background: #0e6b4f;
+    color: #fff;
+}
+
+.topbar-isi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.merek {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navigasi a {
+    color: #d7ece4;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 4px 2px;
+}
+
+.navigasi a:hover {
+    color: #fff;
+}
+
+.navigasi a.aktif {
+    color: #fff;
+    border-bottom: 2px solid #ffd166;
+}
+
+.konten {
+    padding-top: 28px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    margin: 0 0 4px;
+    font-size: 26px;
+}
+
+h2 {
+    margin: 32px 0 4px;
+    font-size: 20px;
+}
+
+.subjudul {
+    margin: 0 0 18px;
+    color: #5c6f68;
+}
+
+.judul-baris {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.pesan-sukses {
+    background: #e2f3ea;
+    border: 1px solid #9ed3b6;
+    color: #14563d;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+}
+
+.kartu-baris {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.kartu {
+    background: #fff;
+    border: 1px solid #dde5e1;
+    border-radius: 8px;
+    padding: 18px 22px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.kartu-angka {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.kartu-label {
+    color: #5c6f68;
+    font-size: 14px;
+}
+
+.kartu-peringatan {
+    border-color: #f0c4c0;
+    background: #fdf1f0;
+}
+
+.kartu-peringatan .kartu-angka {
+    color: #b3261e;
+}
+
+.tabel {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #dde5e1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabel th,
+.tabel td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e7edea;
+    font-size: 15px;
+}
+
+.tabel th {
+    background: #eef3f1;
+    font-weight: 600;
+}
+
+.tabel tr:last-child td {
+    border-bottom: none;
+}
+
+.lencana-merah {
+    background: #fbe3e1;
+    color: #b3261e;
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.aksi {
+    white-space: nowrap;
+}
+
+.aksi a {
+    color: #0e6b4f;
+    margin-right: 10px;
+}
+
+.aksi form {
+    display: inline;
+}
+
+.tautan-bahaya {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #b3261e;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.tombol {
+    display: inline-block;
+    background: #0e6b4f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 9px 18px;
+    font-size: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tombol:hover {
+    background: #0a5740;
+}
+
+.tombol-kecil {
+    padding: 7px 14px;
+}
+
+.pencarian {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.pencarian input {
+    width: 320px;
+    max-width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #c4d0ca;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.pencarian a {
+    color: #0e6b4f;
+}
+
+.formulir {
+    background: #fff;
+    border: 1px solid #dde5e1;
+    border-radius: 8px;
+    padding: 22px;
+    max-width: 560px;
+}
+
+.kolom {
+    margin-bottom: 16px;
+}
+
+.kolom label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.kolom input,
+.kolom select,
+.kolom textarea {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #c4d0ca;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.kolom-baris {
+    display: flex;
+    gap: 16px;
+}
+
+.kolom-baris .kolom {
+    flex: 1;
+}
+
+.galat {
+    color: #b3261e;
+    font-size: 14px;
+    margin: 4px 0 0;
+}
+
+.formulir-aksi {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.formulir-aksi a {
+    color: #5c6f68;
+}
+
+.kaki {
+    padding-bottom: 28px;
+    color: #84958e;
+    font-size: 14px;
+}
