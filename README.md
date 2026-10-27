@@ -1,28 +1,31 @@
 # Website Apotek
 
-Kerangka awal website apotek berbasis Laravel 12. Repositori ini baru berisi struktur dasar proyek Laravel dan halaman sambutan bawaan. Fitur apotek seperti katalog obat dan transaksi belum dibuat.
+Website pengelolaan data apotek berbasis Laravel 12. Aplikasi ini dipakai untuk mencatat kategori dan obat beserta stok, harga, dan tanggal kadaluarsanya. Data contoh tersedia lewat seeder sehingga aplikasi bisa langsung dicoba setelah instalasi.
 
 ## Fitur
 
-- Struktur proyek Laravel 12 yang siap dikembangkan
-- Halaman sambutan bawaan Laravel pada route `/`
-- Migration dasar untuk tabel users, cache, dan jobs
+- Dashboard ringkas berisi jumlah obat, jumlah kategori, dan jumlah obat dengan stok menipis
+- Daftar obat dengan stok menipis pada dashboard, yaitu obat dengan stok di bawah 10
+- CRUD kategori obat dengan nama dan deskripsi
+- CRUD obat dengan nama, kategori, satuan, stok, harga, dan tanggal kadaluarsa
+- Pencarian obat berdasarkan nama pada halaman daftar obat
+- Penanda merah untuk stok yang menipis pada daftar obat dan dashboard
+- Validasi form dasar pada semua masukan
+- Seeder berisi 4 kategori dan 12 obat contoh
 
 ## Teknologi
 
 - PHP 8.2 atau lebih baru
 - Laravel 12
-- Blade
-- Vite dan Tailwind CSS 4 untuk aset frontend
-- SQLite sebagai database bawaan
+- Blade dengan CSS buatan sendiri tanpa Vite dan tanpa CDN
+- SQLite sebagai database
 
 ## Cara Instalasi
 
 Prasyarat:
 
-- PHP 8.2 atau lebih baru
+- PHP 8.2 atau lebih baru dengan ekstensi pdo_sqlite
 - Composer
-- Node.js dan npm
 
 Langkah instalasi:
 
@@ -30,11 +33,13 @@ Langkah instalasi:
 git clone https://github.com/bintangyudhis/website-apotek.git
 cd website-apotek
 composer install
-npm install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate
+touch database/database.sqlite
+php artisan migrate --seed
 ```
+
+Perintah `migrate --seed` membuat tabel sekaligus mengisi 4 kategori dan 12 obat contoh.
 
 ## Cara Menjalankan
 
@@ -44,7 +49,17 @@ Jalankan server pengembangan Laravel:
 php artisan serve
 ```
 
-Buka `http://localhost:8000` di browser untuk melihat halaman sambutan.
+Buka `http://localhost:8000` di browser. Halaman utama menampilkan dashboard, sedangkan data obat dan kategori bisa dibuka dari navigasi di bagian atas.
+
+## Batasan Saat Ini
+
+- Belum ada autentikasi, jadi semua halaman bisa dibuka tanpa masuk
+- Belum ada fitur transaksi, penjualan, atau kasir
+- Harga dicatat sebagai bilangan bulat dalam rupiah
+
+## Tangkapan Layar
+
+![Dashboard Website Apotek](docs/screenshot.png)
 
 ## Lisensi
 
